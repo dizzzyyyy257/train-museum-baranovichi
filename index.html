@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Музей поездов в Барановичах</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="container mt-4">
+    <h1 class="text-center">Музей поездов в Барановичах 🚂</h1>
+    <p class="text-center">
+      Музей открыт 4 декабря 1984 года как музей истории Барановичского отделения Белорусской железной дороги. 
+      В 2017 году включён в реестр музеев Республики Беларусь. 
+      Здесь представлена экспозиция истории железной дороги и коллекция паровозов и тепловозов, 
+      а также уникальная техника под открытым небом.
+    </p>
+
+    <!-- Галерея -->
+    <h2 class="mt-5 text-center">Фото экспонатов</h2>
+    <div id="trainMuseumCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="images/exhibit1.jpg" class="d-block w-100" alt="Паровоз">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Паровоз серии Эу</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/exhibit2.jpg" class="d-block w-100" alt="Вагон">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Пассажирский вагон начала XX века</p>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <img src="images/exhibit3.jpg" class="d-block w-100" alt="Локомотив">
+          <div class="carousel-caption d-none d-md-block">
+            <p>Тепловоз М62</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#trainMuseumCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#trainMuseumCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+    </div>
+
+    <!-- Виртуальный тур -->
+    <h2 class="mt-5 text-center">Виртуальный тур (360°)</h2>
+    <div class="d-flex justify-content-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!4v1763746334010!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRG15SWFEUGc.!2m2!1d53.13317608294367!2d26.03943357297376!3f235.86967570640843!4f3.3853728703523984!5f0.7820865974627469" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Google Maps -->
+    <h2 class="mt-5 text-center">Мы на карте</h2>
+    <div class="d-flex justify-content-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!3m2!1sru!2sby!4v1763746357291!5m2!1sru!2sby!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRG15SWFEUGc.!2m2!1d53.13317608294367!2d26.03943357297376!3f201.0150727177642!4f2.6892468095088446!5f0.7820865974627469" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Контакты -->
+    <h2 class="mt-5">Контакты</h2>
+    <p>Адрес: Барановичи, ул. Фроленкова, 19</p>
+    <p>Телефон: +375 (163) 49-36-47</p>
+    <p>Режим работы: ежедневно 9:00 – 16:00</p>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

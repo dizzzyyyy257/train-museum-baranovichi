@@ -46,15 +46,16 @@
       width: 180px;
       height: 70px;
       background: url("train.png") no-repeat center/contain;
-      position: absolute;
-      top: 50px; /* выше, чтобы не уезжал за рамку */
-      left: -200px;
-      animation: moveTrain 18s linear infinite;
+      position: fixed;       /* фиксируем поезд относительно окна */
+      top: 60px;             /* чуть выше, чтобы не наезжал на текст */
+      left: 0;
+      animation: moveTrain 15s linear infinite;
       z-index: 5;
     }
+
     @keyframes moveTrain {
-      from {left: -200px;}
-      to {left: 100%;}
+      from { transform: translateX(-200px); }
+      to   { transform: translateX(100vw); } /* едет только в пределах окна */
     }
 
     /* Адаптивность для телефонов */
@@ -62,8 +63,8 @@
       .train {
         width: 120px;
         height: 50px;
-        top: 70px; /* чуть выше на мобильных */
-        animation-duration: 12s; /* быстрее проезжает */
+        top: 80px;             /* выше на мобильных */
+        animation-duration: 10s; /* быстрее проезжает */
       }
     }
 
@@ -134,7 +135,6 @@
         <span class="carousel-control-next-icon"></span>
       </button>
     </div>
-
     <!-- Виртуальный тур -->
     <h2 class="mt-5 text-center">Виртуальный тур (360°)</h2>
     <div class="d-flex justify-content-center">
@@ -160,4 +160,25 @@
   </div>
 
   <!-- Кнопка "Наверх" -->
-  <button id="toTop" class="btn btn-secondary">
+  <button id="toTop" class="btn btn-secondary">⬆ Наверх</button>
+
+  <script>
+    // показываем кнопку при прокрутке
+    window.onscroll = function() {
+      const btn = document.getElementById("toTop");
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        btn.style.display = "block";
+      } else {
+        btn.style.display = "none";
+      }
+    };
+
+    // плавный скролл наверх
+    document.getElementById("toTop").onclick = function() {
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

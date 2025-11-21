@@ -6,26 +6,55 @@
   <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
+    /* Анимированный градиентный фон */
     body {
-      background-color: #ffffff; /* белый фон */
-      color: #003366; /* тёмно-синий текст */
+      background: linear-gradient(-45deg, #003366, #0055aa, #ffffff, #e6f0ff);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      color: #003366;
+      position: relative;
+      overflow-x: hidden; /* чтобы поезд не создавал скролл */
     }
+    @keyframes gradientBG {
+      0% {background-position: 0% 50%;}
+      50% {background-position: 100% 50%;}
+      100% {background-position: 0% 50%;}
+    }
+
     .navbar {
-      background-color: #003366; /* синий фон меню */
+      background-color: rgba(0, 51, 102, 0.9); /* полупрозрачный фон */
+      position: relative;
+      z-index: 10;
     }
     .navbar-brand {
-      color: #ffffff !important; /* белая надпись БЧ */
+      color: #ffffff !important;
       font-weight: bold;
       font-size: 1.5rem;
       display: flex;
       align-items: center;
     }
     .navbar-brand img {
-      height: 30px; /* размер логотипа */
-      margin-right: 10px; /* отступ справа от логотипа */
+      height: 30px;
+      margin-right: 10px;
     }
     h1, h2 {
       color: #003366;
+    }
+
+    /* Поезд в шапке */
+    .train {
+      width: 200px;
+      height: 80px;
+      background: url("train.png") no-repeat center/contain;
+      position: absolute;
+      top: 10px;
+      left: -250px;
+      animation: moveTrain 20s linear infinite;
+      z-index: 5;
+    }
+    @keyframes moveTrain {
+      from {left: -250px;}
+      to {left: 100%;}
     }
   </style>
 </head>
@@ -38,6 +67,9 @@
       </a>
     </div>
   </nav>
+
+  <!-- Поезд-анимация -->
+  <div class="train"></div>
 
   <div class="container mt-4">
     <h1 class="text-center">Музей поездов в Барановичах 🚂</h1>
@@ -87,17 +119,13 @@
     <!-- Виртуальный тур -->
     <h2 class="mt-5 text-center">Виртуальный тур (360°)</h2>
     <div class="d-flex justify-content-center">
-      <iframe src="https://www.google.com/maps/embed?pb=!4v1763746334010!6m8!1m7!1sCAoSFkNJSE0wb2dLRUlDQWdJRG15SWFEUGc.!2m2!1d53.13317608294367!2d26.03943357297376!3f235.86967570640843!4f3.3853728703523984!5f0.7820865974627469" 
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
-    <!-- Google Maps -->
+    <!-- Карта -->
     <h2 class="mt-5 text-center">Мы на карте</h2>
     <div class="d-flex justify-content-center">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1692.6015958634707!2d26.037978994552798!3d53.13352832680124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d8d01db31be21d%3A0x8cd4a292dd1fc910!2z0JzRg9C30LXQuSDRh9GL0LPRg9C90LrRlg!5e0!3m2!1sru!2sby!4v1763746577367!5m2!1sru!2sby" 
-              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-              referrerpolicy="no-referrer-when-downgrade"></iframe>
+      <iframe src="..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
 
     <!-- Контакты -->

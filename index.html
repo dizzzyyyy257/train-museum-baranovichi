@@ -3,9 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Музей поездов в Барановичах</title>
+  <!-- Bootstrap -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background-color: #ffffff; /* белый фон */
+      color: #003366; /* тёмно-синий текст */
+    }
+    .navbar {
+      background-color: #003366; /* синий фон меню */
+    }
+    .navbar-brand {
+      color: #ffffff !important; /* белая надпись БЧ */
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+    h1, h2 {
+      color: #003366;
+    }
+  </style>
 </head>
 <body>
+  <!-- Верхняя панель -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">БЧ</a>
+    </div>
+  </nav>
+
   <div class="container mt-4">
     <h1 class="text-center">Музей поездов в Барановичах 🚂</h1>
     <p class="text-center">
@@ -20,22 +45,13 @@
     <div id="trainMuseumCarousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
         <div class="carousel-item active">
-          <img src="images/exhibit1.jpg" class="d-block w-100" alt="Паровоз">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Паровоз серии Эу</p>
-          </div>
+          <img src="images/exhibit1.jpg" class="d-block w-100" alt="Фото экспонатов">
         </div>
         <div class="carousel-item">
-          <img src="images/exhibit2.jpg" class="d-block w-100" alt="Вагон">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Пассажирский вагон начала XX века</p>
-          </div>
+          <img src="images/exhibit2.jpg" class="d-block w-100" alt="Фото экспонатов">
         </div>
         <div class="carousel-item">
-          <img src="images/exhibit3.jpg" class="d-block w-100" alt="Локомотив">
-          <div class="carousel-caption d-none d-md-block">
-            <p>Тепловоз М62</p>
-          </div>
+          <img src="images/exhibit3.jpg" class="d-block w-100" alt="Фото экспонатов">
         </div>
       </div>
       <button class="carousel-control-prev" type="button" data-bs-target="#trainMuseumCarousel" data-bs-slide="prev">
@@ -56,12 +72,11 @@
 
     <!-- Google Maps -->
     <h2 class="mt-5 text-center">Мы на карте</h2>
-<div class="d-flex justify-content-center">
-  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1692.6015958634707!2d26.037978994552798!3d53.13352832680124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d8d01db31be21d%3A0x8cd4a292dd1fc910!2z0JzRg9C30LXQuSDRh9GL0LPRg9C90LrRlg!5e0!3m2!1sru!2sby!4v1763746577367!5m2!1sru!2sby" 
-          width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade"></iframe>
-</div>
-
+    <div class="d-flex justify-content-center">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1692.6015958634707!2d26.037978994552798!3d53.13352832680124!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46d8d01db31be21d%3A0x8cd4a292dd1fc910!2z0JzRg9C30LXQuSDRh9GL0LPRg9C90LrRlg!5e0!3m2!1sru!2sby!4v1763746577367!5m2!1sru!2sby" 
+              width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
 
     <!-- Контакты -->
     <h2 class="mt-5">Контакты</h2>

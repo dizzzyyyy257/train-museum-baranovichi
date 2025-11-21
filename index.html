@@ -23,7 +23,7 @@
 
     .navbar {
       background-color: rgba(0, 51, 102, 0.9);
-      position: relative;
+      position: relative; /* важно для позиционирования поезда */
       z-index: 10;
     }
     .navbar-brand {
@@ -41,21 +41,21 @@
       color: #003366;
     }
 
-    /* Поезд в шапке */
+     /* Поезд в шапке */
     .train {
       width: 180px;
       height: 70px;
       background: url("train.png") no-repeat center/contain;
-      position: fixed;       /* фиксируем поезд относительно окна */
-      top: 60px;             /* чуть выше, чтобы не наезжал на текст */
-      left: 0;
+      position: absolute;   /* теперь поезд привязан к навбару */
+      top: 10px;            /* положение внутри навбара */
+      left: -200px;
       animation: moveTrain 15s linear infinite;
       z-index: 5;
     }
 
     @keyframes moveTrain {
-      from { transform: translateX(-200px); }
-      to   { transform: translateX(100vw); } /* едет только в пределах окна */
+      from { left: -200px; }
+      to   { left: 100%; }  /* едет только в пределах контейнера */
     }
 
     /* Адаптивность для телефонов */
@@ -63,8 +63,8 @@
       .train {
         width: 120px;
         height: 50px;
-        top: 80px;             /* выше на мобильных */
-        animation-duration: 10s; /* быстрее проезжает */
+        top: 20px;
+        animation-duration: 10s;
       }
     }
 

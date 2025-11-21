@@ -17,14 +17,15 @@
       color: #ffffff !important; /* белая надпись БЧ */
       font-weight: bold;
       font-size: 1.5rem;
+      display: flex;
+      align-items: center;
+    }
+    .navbar-brand img {
+      height: 30px; /* размер логотипа */
+      margin-right: 10px; /* отступ справа от логотипа */
     }
     h1, h2 {
       color: #003366;
-    }
-    /* уменьшение высоты фото экспонатов */
-    .carousel-item img {
-      max-height: 400px; /* ограничение высоты */
-      object-fit: cover; /* чтобы картинка не растягивалась */
     }
   </style>
 </head>
@@ -32,7 +33,9 @@
   <!-- Верхняя панель -->
   <nav class="navbar">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">БЧ</a>
+      <a class="navbar-brand" href="#">
+        <img src="logo.png" alt="Логотип"> БЧ
+      </a>
     </div>
   </nav>
 
